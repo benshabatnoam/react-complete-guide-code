@@ -1,10 +1,12 @@
 import React from 'react';
+import Button from '../UI/Button';
 
 import Card from '../UI/Card';
 import classes from './AddUser.module.css';
 
 const AddUser = () => {
   const addUserHandler = (event) => {
+    alert('hello');
     event.preventDefault();
   };
   return (
@@ -14,7 +16,7 @@ const AddUser = () => {
         <input type='text' id='username' />
         <label htmlFor='age'>Age</label>
         <input type='number' id='age' />
-        <button type='submit'>Add User</button>
+        <Button type='submit' onClick={() => alert('wow')}>Add User</Button>
       </form>
     </Card>
   );
