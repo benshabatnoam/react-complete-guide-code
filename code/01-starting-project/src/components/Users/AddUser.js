@@ -36,12 +36,12 @@ const AddUser = (props) => {
   };
 
   const closeErrorHandler = () => {
-    setError(false);
+    setError(null);
   };
 
   return (
     <>
-      {error ? <ErrorModal title={error.title} message={error.message} close={closeErrorHandler} /> : ''}
+      {error && <ErrorModal title={error.title} message={error.message} close={closeErrorHandler} />}
       <Card className={classes.input}>
         <form onSubmit={addUserHandler}>
           <label htmlFor='username'>Username</label>
