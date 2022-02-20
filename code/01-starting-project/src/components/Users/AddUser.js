@@ -21,7 +21,7 @@ const AddUser = (props) => {
     if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0 || +enteredAge < 1) {
       return;
     }
-    props.userAdded({ username: enteredUsername, age: enteredAge });
+    props.addUser({ username: enteredUsername, age: enteredAge });
     setEnteredUsername('');
     setEnteredAge('');
   };
